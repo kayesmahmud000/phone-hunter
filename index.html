@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Phone</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    
+</head>
+<body>
+    <header class=" bg-cyan-50">
+        <nav class=" w-11/12 mx-auto py-5">
+            <div class="navbar ">
+                <div class="navbar-start">
+                  
+                  <a class="btn btn-ghost text-2xl font-bold">Hot Gadgets</a>
+                </div>
+                
+                <div class="navbar-end">
+                  <a class="btn bg-cyan-500 text-xl text-white">Sign up</a>
+                </div>
+              </div>
+        </nav>
+        
+    </header>
+    <main class="my-10" >
+        <h2 class="text-4xl font-bold text-center">Search your phone</h2>
+        <div class=" w-11/12 mx-auto items-center justify-center my-10">
+           
+           <div class="flex justify-center">
+            <label class="input input-bordered flex items-center gap-2">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="h-4 w-4 opacity-70">
+                <path
+                  fill-rule="evenodd"
+                  d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                  clip-rule="evenodd" />
+              </svg>
+                <input id="search-text" type="text" class="grow" placeholder="Search your phone" />
+               
+              </label>
+              <button onclick="handleSearch()" class="btn bg-cyan-500 text-white text-xl">Search </button>
+           </div>
+           <div  class="flex  items-center my-5 justify-center">
+            <span id="spinner" class="loading spinner hidden loading-spinner text-info"></span>
+           </div>
+        </div>
+        <!-- phone container -->
+         <div id="phone-container" class="w-11/12 mx-auto text-center justify-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10"></div>
+         <!-- show modal -->
+          <div id="show-modal">
+            <!-- Open the modal using ID.showModal() method -->
+            
+           
+          </div>
+        <!-- show all btn  -->
+        <div class="text-center my-4">
+            <button onclick="handelShowAll()" class="btn bg-cyan-400 text-white text-xl">Show All</button>
+        </div>
+        
+      
+
+    </main>
+    
+        <footer class="bg-cyan-50 py-10  ">
+           <div class=" w-11/12 mx-auto ">
+            <div class=" flex justify-between border-b-2 py-5">
+            <h2 class="text-4xl font-bold">Hot Gadgets</h2>
+            <button class="btn bg-cyan-500 text-white text-xl border-none">Join Premium</button>
+            </div>
+            <div class=" grid grid-cols-4 py-10  text-center  text-neutral-700" >
+            
+             <ul class="text-left">
+                 <h6 class="footer-title">Product</h6>
+                <li class="">Browse jobs</li>
+                <li class="">Remote jobs</li>
+                <li class="">Startup jobs</li>
+                <li class="">Company jobs</li>
+               </ul>
+             <ul  class="text-left">
+                 <h6 class="footer-title">Popular</h6>
+                 <li class="">UIUX Design</li>
+                 <li class="">Product Design</li>
+                 <li class="">Back-End Developer</li>
+                 <li class="">Front-End Developer</li>
+               </ul>
+             <ul  class="text-left">
+                 <h6 class="footer-title">Resource</h6>
+                 <li class="">FaQ</li>
+                 <li class="">Supports</li>
+                 <li class="">Privacy Policy</li>
+                 <li class="">Terms of Service</li>
+               </ul>
+             <ul  class="text-left">
+                 <h6 class="footer-title">Company</h6>
+                 <li class="">About us</li>
+                 <li class="">Contact Us</li>
+                 <li class="">Career Tips</li>
+                 <li class="">Careers</li>
+               </ul>
+               
+            </div>
+           </div>
+            
+          </footer>
+    
+
+    <script src="./phone/phone.js"></script>
+</body>
+</html>
